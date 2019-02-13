@@ -1,0 +1,11 @@
+.nav-bar {
+    background-color: #f44336 !important;
+}
+
+.nav-bar button {
+    display: none !important;
+}
+
+.nav-bar h1 {
+    margin-left: 20px !important;
+}

@@ -5,6 +5,8 @@ import MenuItem from 'material-ui/MenuItem';
 import axios from 'axios';
 import ImageResults from '../image-results/ImageResults';
 
+import './Search.css';
+
 class Search extends Component {
     state = {
         searchKey: '',
@@ -33,7 +35,7 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className="search-container">
                 <TextField
                     name="searchKey"
                     value={this.state.searchKey}

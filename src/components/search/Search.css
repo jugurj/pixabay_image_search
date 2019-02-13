@@ -6,3 +6,7 @@
     display: flex;
     margin: 20px 0px;
 }
+
+.search-field > label:focus {
+    color: #f44336 !important;
+}

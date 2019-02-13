@@ -35,13 +35,23 @@ class Search extends Component {
     }
 
     render() {
+
+        const style = {
+            textfield: {
+                color: '#f44336'
+            }
+        }
+
         return (
+
             <div className="search-container">
                 <TextField
+                    className="search-field"
                     name="searchKey"
                     value={this.state.searchKey}
                     onChange={this.onKeyChange}
                     floatingLabelText="Search For Images"
+                    style={style.textfield}
                     fullWidth={true} /><br />
                 <h4>Select Amount:</h4>
                 <RadioGroup

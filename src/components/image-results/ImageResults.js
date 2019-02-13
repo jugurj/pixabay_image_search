@@ -5,6 +5,7 @@ import IconButton from 'material-ui/IconButton';
 import ZoomIn from 'material-ui/svg-icons/action/zoom-in';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
+import './ImageResults.css';
 
 class ImageResults extends Component {
     state = {
@@ -58,7 +59,7 @@ class ImageResults extends Component {
         ]
 
         return (
-            <div>
+            <div className="image-results-container">
                 {imageListContent}
                 <Dialog
                     actions={actions}

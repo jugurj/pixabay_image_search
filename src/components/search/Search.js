@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
+import RadioGroup from 'material-ui/RadioButton/RadioButtonGroup';
+import RadioButton from 'material-ui/RadioButton';
+import Divider from 'material-ui/Divider';
 import axios from 'axios';
 import ImageResults from '../image-results/ImageResults';
 
@@ -29,7 +30,7 @@ class Search extends Component {
         });
     }
 
-    onAmountChange = (e, index, value) => {
+    onAmountChange = (e, value) => {
         this.setState({ amount: value })
     }
 
@@ -42,18 +43,20 @@ class Search extends Component {
                     onChange={this.onKeyChange}
                     floatingLabelText="Search For Images"
                     fullWidth={true} /><br />
-                <SelectField
+                <h4>Select Amount:</h4>
+                <RadioGroup
+                    className="radio-btn-group"
                     name="amount"
                     value={this.state.amount}
                     onChange={this.onAmountChange}
-                    floatingLabelText="Amount"
+                    defaultSelected={this.state.amount}
                 >
-                    <MenuItem value={5} primaryText="5" />
-                    <MenuItem value={10} primaryText="10" />
-                    <MenuItem value={15} primaryText="15" />
-                    <MenuItem value={30} primaryText="30" />
-                    <MenuItem value={50} primaryText="50" />
-                </SelectField><br />
+                    <RadioButton value={9} label="9" />
+                    <RadioButton value={15} label="15" />
+                    <RadioButton value={21} label="21" />
+                    <RadioButton value={30} label="30" />
+                </RadioGroup>
+                <Divider className="search-divider" />
                 {this.state.images.length > 0 ? (<ImageResults images={this.state.images} />) : <p>No Images found.</p>}
             </div>
         );

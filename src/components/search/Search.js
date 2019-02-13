@@ -27,7 +27,6 @@ class Search extends Component {
     }
 
     render() {
-        console.log(this.state.images);
         return (
             <div>
                 <TextField
@@ -47,7 +46,8 @@ class Search extends Component {
                     <MenuItem value={15} primaryText="15" />
                     <MenuItem value={30} primaryText="30" />
                     <MenuItem value={50} primaryText="50" />
-                </SelectField>
+                </SelectField><br />
+                {this.state.images.length > 0 ? (<ImageResults images={this.state.images} />) : <p>No Images found.</p>}
             </div>
         );
     }

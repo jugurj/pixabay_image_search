@@ -13,7 +13,7 @@ class App extends Component {
 
     return (
       <MuiThemeProvider>
-        <div>
+        <div className="main-container">
           <NavBar />
           <Search />
         </div>

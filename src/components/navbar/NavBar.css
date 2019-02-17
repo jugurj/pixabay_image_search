@@ -14,5 +14,6 @@
     .nav-bar h1 {
         margin: 0 auto !important;
         width: 920px !important;
+        flex: none !important;
     }
 }

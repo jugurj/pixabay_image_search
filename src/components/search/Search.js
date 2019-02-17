@@ -64,7 +64,7 @@ class Search extends Component {
                     <RadioButton value={30} label="30" />
                 </RadioGroup>
                 <Divider className="search-divider" />
-                {this.state.images.length > 0 ? (<ImageResults images={this.state.images} />) : <p>No Images found.</p>}
+                {this.state.images.length > 0 ? (<ImageResults images={this.state.images} />) : <img className="no-image-placeholder" src="http://bespokedigitalmedia.in/images/result-not-found-1.png" alt="Oops! No results found." />}
             </div>
         );
     }

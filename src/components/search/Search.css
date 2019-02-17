@@ -11,6 +11,13 @@
     color: #f44336 !important;
 }
 
+.no-image-placeholder {
+    display: block;
+    margin: 150px auto;
+    max-width: 250px;
+    opacity: .5;
+}
+
 @media screen and (min-width: 1000px) {
     .search-container {
         margin: 0 auto;
